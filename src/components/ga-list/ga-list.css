@@ -1,0 +1,5 @@
+@import "../../assets/css/tachyons.min.css";
+
+.ga-table-row:hover {
+  background-color: #9EEBCF;
+}

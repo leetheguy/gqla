@@ -1,7 +1,7 @@
 {
-  "name": "gql-admin-components",
+  "name": "graphql-admin",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "description": "A drop-in administrative interface for GraphQL data.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",
@@ -23,5 +23,11 @@
   "devDependencies": {
     "@stencil/core": "1.0.0-beta.5"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@ionic/core": "^4.4.2",
+    "axios": "^0.18.0",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0"
+  }
 }
