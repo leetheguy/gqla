@@ -6,43 +6,49 @@
 
 
 import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
+import {
+  GAModel,
+} from './ga-utils/GAModel';
 
 
 export namespace Components {
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
+  interface GaForm {
+    'model': GAModel;
+    'side': String;
+  }
+  interface GaList {
+    'model': GAModel;
+    'side': String;
+  }
+  interface GraphqlAdmin {
+    'dataPath': string;
+    'dataSource': string;
   }
 }
 
 declare namespace LocalJSX {
-  interface MyComponent extends JSXBase.HTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
+  interface GaForm extends JSXBase.HTMLAttributes {
+    'model'?: GAModel;
+    'onFormSubmittedEvent'?: (event: CustomEvent<any>) => void;
+    'onModelUpdated'?: (event: CustomEvent<any>) => void;
+    'onSubTableSelected'?: (event: CustomEvent<any>) => void;
+    'side'?: String;
+  }
+  interface GaList extends JSXBase.HTMLAttributes {
+    'model'?: GAModel;
+    'onLeftRowSelected'?: (event: CustomEvent<any>) => void;
+    'onRightRowSelected'?: (event: CustomEvent<any>) => void;
+    'side'?: String;
+  }
+  interface GraphqlAdmin extends JSXBase.HTMLAttributes {
+    'dataPath'?: string;
+    'dataSource'?: string;
   }
 
   interface IntrinsicElements {
-    'my-component': MyComponent;
+    'ga-form': GaForm;
+    'ga-list': GaList;
+    'graphql-admin': GraphqlAdmin;
   }
 }
 
@@ -60,14 +66,28 @@ declare global {
 
 
 
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  interface HTMLGaFormElement extends Components.GaForm, HTMLStencilElement {}
+  var HTMLGaFormElement: {
+    prototype: HTMLGaFormElement;
+    new (): HTMLGaFormElement;
+  };
+
+  interface HTMLGaListElement extends Components.GaList, HTMLStencilElement {}
+  var HTMLGaListElement: {
+    prototype: HTMLGaListElement;
+    new (): HTMLGaListElement;
+  };
+
+  interface HTMLGraphqlAdminElement extends Components.GraphqlAdmin, HTMLStencilElement {}
+  var HTMLGraphqlAdminElement: {
+    prototype: HTMLGraphqlAdminElement;
+    new (): HTMLGraphqlAdminElement;
   };
 
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'ga-form': HTMLGaFormElement;
+    'ga-list': HTMLGaListElement;
+    'graphql-admin': HTMLGraphqlAdminElement;
   }
 
   interface ElementTagNameMap extends HTMLElementTagNameMap {}

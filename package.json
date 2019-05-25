@@ -1,7 +1,7 @@
 {
-  "name": "graphql-admin",
+  "name": "gqla",
   "version": "0.0.1",
-  "description": "A drop-in administrative interface for GraphQL data.",
+  "description": "GraphQL Admin is a drop-in CMS and administrative interface for GraphQL data.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",
@@ -28,6 +28,7 @@
     "@ionic/core": "^4.4.2",
     "axios": "^0.18.0",
     "lodash": "^4.17.11",
-    "moment": "^2.24.0"
+    "moment": "^2.24.0",
+    "redux": "^4.0.1"
   }
 }

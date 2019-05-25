@@ -78,7 +78,7 @@ export class GraphQLAdmin {
   }
 
   @Listen('formSubmittedEvent')
-  async formSubmittedHandler(event: CustomEvent) {
+  async formSubmittedHandler() {
     await this.navigation.buildDataFromPath(this.dataPath);
 
     this.updateModels();

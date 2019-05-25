@@ -51,14 +51,12 @@ export class GAModel {
 
   async updateItem(data: any) {
     await this.webService.runUpdateMutation(this.table, data)
-    .then(result => null)
     .catch(error => console.error(error));
     return this.item;
   }
 
   async deleteItem(data: any) {
     await this.webService.runDeleteMutation(this.table, data)
-    .then(result => null)
     .catch(error => console.error(error));
     return this.item;
   }
