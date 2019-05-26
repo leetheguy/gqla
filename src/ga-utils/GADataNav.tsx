@@ -1,5 +1,3 @@
-//TODO URL should be passed in as a string through a prop.
-//TODO This should not interfere with the actual URL.
 import { GAWebService } from "./GAWebService";
 import { GAModel } from './GAModel';
 import { GAState } from './GAState';
@@ -52,16 +50,6 @@ export class GADataNav {
   popPage() {
     GAState.appState.store.dispatch({type: 'pop_model'})
   }
-
-  // rebuildUrl() {
-  //   let model = GAState.currentState.models[0]
-  //   let stateString = _(GAState.currentState.models)
-  //   .map(model => {
-  //     return model.table.dataName + (model.item.id ? '/' + model.item.id : '');
-  //   })
-  //   .join('/');
-  //   history.pushState(null, model.table.singularName, '/admin/' + stateString + '/');
-  // }
 
   get currentState() { return GAState.appState.store.getState() }
 }

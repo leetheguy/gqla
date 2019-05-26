@@ -264,7 +264,7 @@ export class FormComponent {
       ?
       <ion-row>
         <ion-col size="auto">
-          <ion-button expand="block" color="danger" onClick={() => this.delete()}><ion-icon name="trash" slot="start"></ion-icon> Delete</ion-button>
+          <ion-button expand="block" color="danger" onClick={() => this.delete()} class="bg-red"><ion-icon name="trash" slot="start"></ion-icon> Delete</ion-button>
         </ion-col>
         <ion-col>
           <ion-button expand="block" type="submit"><ion-icon name="save" slot="start"></ion-icon> Update</ion-button>
