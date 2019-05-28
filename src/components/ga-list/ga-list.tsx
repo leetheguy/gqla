@@ -1,4 +1,4 @@
-import { Component, State, Prop, Event, Watch, h, EventEmitter } from '@stencil/core';
+import { Component, State, Prop, Event, Watch, EventEmitter, h } from '@stencil/core';
 import { GAModel } from '../../ga-utils/GAModel';
 import { GATable } from '../../ga-utils/GAWebService';
 

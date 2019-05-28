@@ -23,12 +23,12 @@ export class GAWebService {
   `;
 
   async init() {
-    await this.runTablelessListQuery('gqa_tables', this.structureFields)
+    await this.runTablelessListQuery('gqla_tables', this.structureFields)
     .then(this.buildTables).catch(error => console.error(error));
   }
 
   buildTables = (result) => {
-    this.tables = _.map(result.data.data.gqa_tables, table => new GATable(table));
+    this.tables = _.map(result.data.data.gqla_tables, table => new GATable(table));
   }
 
   private async runTablelessListQuery(tableName: string, fields: string) {

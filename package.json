@@ -1,6 +1,6 @@
 {
   "name": "gqla",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "GraphQL Admin is a drop-in CMS and administrative interface for GraphQL data.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
